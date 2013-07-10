@@ -1,0 +1,17 @@
+{# src/Sdz/BlogBundle/Resources/views/Blog/index.html.twig #}
+ 
+{% extends "SdzBlogBundle::layout.html.twig" %}
+ 
+{% block title %}{{ parent() }} - Index {% endblock %}
+  
+{% block sdzblog_body %}
+{#			<pre>DUMP: {{ dump(facet) }}</pre> #}
+<h2>Liste des destinations</h2>
+	<ul>{% for pays, count in facet  %}
+		<ul>
+			<li><a href="{{ path('sdzblog_lister_sejours_pays', {'pays':pays}) }}">{{ pays|replace({'-':" "})|title }}</a><b> {{ pays }}</b>
+		</ul>
+	{% endfor  %}
+	</ul>
+
+{% endblock %}

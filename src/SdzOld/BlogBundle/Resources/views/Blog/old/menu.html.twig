@@ -1,0 +1,9 @@
+  <div class="row">
+	  {% for article in liste_articles %}
+                <div class="span4">
+                    <h2>{{ article.titre }}</h2>
+                    <p>{{ article.contenu }}</p>
+                    <p><a class="btn" href="{{ path('sdzblog_voir', {'id':article.id}) }}">La suite !</a></p>
+                </div>
+	{% endfor %}
+</div>

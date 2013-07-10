@@ -1,0 +1,56 @@
+{# src/Sdz/BlogBundle/Resources/views/Blog/voir.html.twig #}
+{% extends "SdzBlogBundle::layout.html.twig" %}
+
+{% block title %} Article - {{ article.titre }} - {{ parent() }} {% endblock %}
+ 
+{% block sdzblog_body %}
+
+	<h2>{# Verif image associee a article #}
+		{# if article.image is not null #}
+		<img src="{{ article.image.url }}" alt="{{ article.image.alt }}" />
+		{# endif  #}
+	
+	{{ article.titre  }}
+	</h2>
+	
+	<i>Par {{  article.auteur }} le {{ article.date|date('d/m/Y') }}</i>
+	{% if article.categories.count > 0 %} - Catégories :
+		{% for categorie in article.categories %}
+		      	{{ categorie.nom }}
+		    	{% if not loop.last %} - {% endif %}
+	   	{% endfor %}
+  	{% endif %}
+	{% if listeArticleCompetence|length > 0 %}
+		{% for articleCompetence in listeArticleCompetence %}
+	Competences : {{ articleCompetence.competence.nom }}
+		{% endfor %}
+	{% endif  %}
+	<div class="well"> {{ article.contenu  }}</div>
+	{% if liste_commentaires is not null %}
+	<p>Commentaire(s)</p>
+
+	{% for commentaire in liste_commentaires %}
+	<div class="well">
+	<ul>
+	<li>Auteur: {{ commentaire.auteur }}</li>
+	<li>Date : {{ commentaire.date|date('d/m/Y')  }}</li>
+	<li>Contenu : {{ commentaire.contenu  }}</li>	
+	</ul>
+	</div>
+	{% endfor  %}
+	{% endif %}
+<p>
+    <a href="{{ path('sdzblog_index') }}" class="btn">
+      <i class="icon-chevron-left"></i>
+      Retour à la liste
+    </a>
+    <a href="{{ path('sdzblog_modifier', {'id': article.id}) }}" class="btn">
+      <i class="icon-edit"></i>
+      Modifier l'article
+    </a>
+    <a href="{{ path('sdzblog_supprimer', {'id': article.id}) }}" class="btn">
+      <i class="icon-trash"></i>
+      Supprimer l'article
+    </a>
+  </p>
+{% endblock  %}

@@ -1,0 +1,18 @@
+sdzblog_index:
+    pattern: /{page}
+    defaults: { _controller:SdzBlogBundle:Blog:index, page:1}
+    requirements:
+        id:     \d*
+
+sdzblog_lister_sejours_pays_paginated:
+    pattern: /sejour/{pays}/startfrom-{start}
+    defaults: { _controller: SdzBlogBundle:Blog:lister_sejours_pays, start:0}
+    requirements:
+        start:   \d*
+
+sdzblog_lister_sejours_pays:
+    pattern: /sejour/{pays}
+    defaults: { _controller: SdzBlogBundle:Blog:lister_sejours_pays, start:0}
+    requirements:
+        start:   \d*
+

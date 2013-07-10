@@ -1,0 +1,182 @@
+{# src/Sdz/BlogBundle/Resources/views/Blog/sejours_par_pays.html.twig #}
+ 
+{% extends "SdzBlogBundle::layout.html.twig" %}
+ 
+{% block title %}S&eacute;jours {{ pays }} pas chers - {{ parent() }} {% endblock %}
+  
+{% block sdzblog_body %}
+
+<div class="row">
+  <div class="span3">
+<div class="sidebar-nav">
+  <div class="base">
+   <ul class="nav nav-list">
+                <li class="nav-header">Voyages</li>
+                <li class="active"><a href="#"><div class="fs1" aria-hidden="true" data-icon="."></div>Destinations</a></li><li> </li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/tunisie" class="lien_inline" style="display: inline-block">Tunisie </a> (3767)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/turquie" class="lien_inline" style="display: inline-block">Turquie </a> (796)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/ile-maurice" class="lien_inline" style="display: inline-block">Ile Maurice </a> (620)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/crete" class="lien_inline" style="display: inline-block">Crete </a> (504)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/fuerteventura" class="lien_inline" style="display: inline-block">Fuerteventura </a> (389)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/baleares" class="lien_inline" style="display: inline-block">Baleares </a> (370)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/republique-dominicaine" class="lien_inline" style="display: inline-block">Republique Dominicaine </a> (343)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/grece" class="lien_inline" style="display: inline-block">Grece </a> (233)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/maroc" class="lien_inline" style="display: inline-block">Maroc </a> (229)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/guadeloupe" class="lien_inline" style="display: inline-block">Guadeloupe </a> (211)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/mexique" class="lien_inline" style="display: inline-block">Mexique </a> (184)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/martinique" class="lien_inline" style="display: inline-block">Martinique </a> (181)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/egypte" class="lien_inline" style="display: inline-block">Egypte </a> (161)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/sainte-lucie" class="lien_inline" style="display: inline-block">Sainte Lucie </a> (119)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/jamaique" class="lien_inline" style="display: inline-block">Jamaique </a> (113)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/andalousie" class="lien_inline" style="display: inline-block">Andalousie </a> (98)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/sicile-et-italie-du-sud" class="lien_inline" style="display: inline-block">Sicile Et Italie Du Sud </a> (93)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/croatie" class="lien_inline" style="display: inline-block">Croatie </a> (82)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/sardaigne" class="lien_inline" style="display: inline-block">Sardaigne </a> (72)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/madere" class="lien_inline" style="display: inline-block">Madere </a> (67)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/maldives" class="lien_inline" style="display: inline-block">Maldives </a> (51)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/cap-vert" class="lien_inline" style="display: inline-block">Cap Vert </a> (45)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/cuba" class="lien_inline" style="display: inline-block">Cuba </a> (45)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/canaries" class="lien_inline" style="display: inline-block">Canaries </a> (44)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/antigua" class="lien_inline" style="display: inline-block">Antigua </a> (35)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/senegal" class="lien_inline" style="display: inline-block">Senegal </a> (30)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/iles-des-acores" class="lien_inline" style="display: inline-block">Iles Des Acores </a> (28)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/france-languedoc-roussillon" class="lien_inline" style="display: inline-block">France Languedoc Roussillon </a> (23)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/france-alpes" class="lien_inline" style="display: inline-block">France Alpes </a> (22)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/madagascar" class="lien_inline" style="display: inline-block">Madagascar </a> (22)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/bali" class="lien_inline" style="display: inline-block">Bali </a> (21)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/cr%C3%A8te" class="lien_inline" style="display: inline-block">Crète </a> (19)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/portugal" class="lien_inline" style="display: inline-block">Portugal </a> (17)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/rhodes" class="lien_inline" style="display: inline-block">Rhodes </a> (17)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/chypre" class="lien_inline" style="display: inline-block">Chypre </a> (10)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/bahamas" class="lien_inline" style="display: inline-block">Bahamas </a> (9)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/ile-de-kos" class="lien_inline" style="display: inline-block">Ile De Kos </a> (8)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/bulgarie" class="lien_inline" style="display: inline-block">Bulgarie </a> (7)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/france-provence-cote-d-azur" class="lien_inline" style="display: inline-block">France Provence Cote D Azur </a> (7)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/malte" class="lien_inline" style="display: inline-block">Malte </a> (6)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/ibiza" class="lien_inline" style="display: inline-block">Ibiza </a> (5)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/zanzibar" class="lien_inline" style="display: inline-block">Zanzibar </a> (5)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/allemagne" class="lien_inline" style="display: inline-block">Allemagne </a> (4)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/autriche" class="lien_inline" style="display: inline-block">Autriche </a> (4)</li>
+	                <li><a href="/Symfony/web/app_dev.php/blog/sejour/kenya" class="lien_inline" style="display: inline-block">Kenya </a> (2)</li>
+	                <li class="divider"></li>
+<li class="nav-header">Fourchette de prix</li>
+<li>
+<form class="form-inline">
+<input class="input-small" placeholder="Min" type="text">
+<input class="input-small" placeholder="Max" type="text">
+</form>
+</li>
+
+<li class="divider"></li>
+<li class="nav-header">Options</li>
+<div class="">
+
+            <div class="input-wrapper">
+              <div class="clearfix prettycheckbox labelright  green"><div class="clearfix prettycheckbox labelright  blue"><input class="prettyCheckable" value="1" id="Test1" name="Test1" data-label="Golf" style="display: none;" type="checkbox"><a href="#" class=""></a>
+<label for="Test1">Golf</label></div>
+</div>
+            </div><div class="input-wrapper">
+              <div class="clearfix prettycheckbox labelright  green"><div class="clearfix prettycheckbox labelright  blue"><input class="prettyCheckable" value="1" id="Test1" name="Test1" data-label="Piscine" style="display: none;" type="checkbox"><a href="#" class=""></a>
+<label for="Test1">Piscine</label></div>
+</div>
+            </div>
+
+    <li class="divider"></li>
+
+            <div class="input-wrapper">
+				<li class="nav-header">Affiner</li>
+				<div class="clearfix prettyradio labelright margin-right blue">
+					<div class="clearfix prettyradio labelright margin-right blue"><input class="prettyCheckable" value="yes" name="colors" data-label="Oui" data-customclass="margin-right" style="display: none;" checked="checked" type="radio"><a href="#" class="checked"></a>
+<label for="undefined">Oui</label></div>
+				</div>
+              <div class="clearfix prettyradio labelright  blue"><div class="clearfix prettyradio labelright  blue"><input class="prettyCheckable" value="Non" name="colors" data-label="No" style="display: none;" type="radio"><a href="#" class=""></a>
+<label for="undefined">No</label></div>
+				</div>
+            </div>
+			
+<hr>
+            <div id="other-colors" class="hide" style="display: block;">
+
+              <div class="input-wrapper">
+                
+                <div class="input-wrapper">
+                  <div class="clearfix prettycheckbox labelright  blue"><div class="clearfix prettycheckbox labelright  blue"><input class="prettyCheckable" value="1" id="color1" checked="" name="color1" data-label="5 étoiles" style="display: none;" type="checkbox"><a href="#" class="checked"></a>
+<label for="color1">5 étoiles</label></div>
+</div>
+                </div>
+
+                <div class="input-wrapper">
+                  <div class="clearfix prettycheckbox labelright  green"><div class="clearfix prettycheckbox labelright  " green""=""><input class="prettyCheckable" value="1" id="color2" checked="" name="color2" data-label="4 étoiles" data-color="&quot;green&quot;" style="display: none;" type="checkbox"><a href="#" class="checked"></a>
+<label for="color2">4 étoiles</label></div>
+</div>
+                </div>
+
+                <div class="input-wrapper">
+                  <div class="clearfix prettycheckbox labelright  red"><div class="clearfix prettycheckbox labelright  " red""=""><input class="prettyCheckable" value="1" id="color3" checked="" name="color3" data-label="3 étoiles" data-color="&quot;red&quot;" style="display: none;" type="checkbox"><a href="#" class="checked"></a>
+<label for="color3">3 étoiles</label></div>
+</div>
+                </div>
+
+                <div class="input-wrapper">
+                  <div class="clearfix prettycheckbox labelright  yellow"><div class="clearfix prettycheckbox labelright  " yellow""=""><input class="prettyCheckable" value="1" id="color4" checked="" name="color4" data-label="2 étoiles" data-color="&quot;yellow&quot;" style="display: none;" type="checkbox"><a href="#" class="checked"></a>
+<label for="color4">2 étoiles</label></div>
+</div>
+
+
+</div>
+</div>
+<hr>
+</div>
+</div>
+</ul>
+</div>
+</div>
+</div>
+ 
+
+ <!-- End Left Sidebar  -->
+
+
+
+<div class="span9">
+	<div class="bs-docs-grid">
+	    <div class="row-fluid show-grid">
+		    <div class="span12">S&eacute;jours {{  pays|title }} tout compris</div>
+			    <div class="row-fluid show-grid">
+			350 s&eacute;jours all inclusives disponibles
+			    <div class="row-fluid show-grid">
+				    <div class="span12"><pre>S&eacute;jours en {{pays|title}}: Comparez les séjurs en {{pays|title}} de tous les voyagistes.
+								Pour trouver votre s&eacute;jour en {{pays|title}} pas cher, comparez!
+								Nous comparons toutes les offres de séjurs parmi plus de 15 voyagistes et tours opérateurs.
+								Parcourez toutes les meilleures offres de s&eacute;jours tout compris discount en {{pays|title}}.
+								Partez en voyage en {{pays|title}} pas cher, et trouvez vos vacances moins ch&egrave;res avec All.Inclusive.fr !</pre>
+
+					{% for resultat in resultsolr  %}
+						{% if resultat.terms is not null %}
+
+    					    <div class="row-fluid show-grid">
+						    <div class="span12">
+		    					    <div class="row-fluid show-grid">
+								<div class="span3"><img src="http://www.promovacances.com/zi/promovac/48/SAI00549648A_pp.jpg"></div>
+								<div class="span6"><h5> {{ resultat.name }} </h5><p class="description_offre">{{ resultat.terms|truncate(400, false, '...') }}</p></div>
+								<div class="span2"><a class="prix" href="{{resultat.deepLink}}">{{ resultat.price|number_format(0, '.', '') }} &euro;</a></div>
+							    </div>
+							</div>	
+						</div>
+		    		<br/>
+               {% endif  %}
+        {% endfor  %}
+</div> 	
+</div> 	
+</div> 	
+</div> 	
+</div> 	
+</div> 	
+</div> 	
+<div class="pagination">
+    <ul>
+      {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
+    </ul>
+  </div>
+
+{% endblock %}

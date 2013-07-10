@@ -1,0 +1,86 @@
+<?php
+
+//Sdz/BlogBundle/Controller/BlogController.php
+
+namespace Sdz\BlogBundle\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
+
+class BlogController extends Controller
+{
+	public function indexAction($page)
+	{
+	if ($page<1)
+	{
+		throw $this->createNotFoundException('Page inexistante (page = '.$page.')');
+	}
+	return $this->render('SdzBlogBundle:Blog:index.html.twig');
+	}
+
+	public function supprimerAction($id)
+	{
+	//TODO : recup article = a $id
+	//TODO : gerer supp de l'article
+	return $this->render('SdzBlogBundle:Blog:supprimer.html.twig');
+
+	}
+
+
+	public function modifierAction($id)
+	{
+	//TODO: Recup article  qui correspond a $id
+	//TODO: Creation et gestion formulaire
+	return $this->render('SdzBlogBundle:Blog:modifier.html.twig');
+	}
+
+	public function ajouterAction()
+	{
+	if($this->get('request')->getMethod() == 'POST')
+	{
+		// TODO : creation et gestion du formulaire 
+		$this->get('session')->getFlashBag()->add('notice', 'article ajoute');
+		return $this->redirect($this->generateUrl('sdzblog_voir', array('id'=>5)));
+	}
+		// Pas POST ? Afficher formulaire !
+	return $this->render('SdzBlogBundle:Blog:ajouter.html.twig');
+
+//FLASHBAG : VAR DE SESSION A EXPIRATION AU REFRESH
+//	$this->get('session')->getFlashBag()->add('info', 'article enregistrÃ');
+//	$this->get('session')->getFlashBag()->add('info', 'oui oui article enregistrÃ !!!');
+//	return $this->redirect($this->generateUrl('sdzblog_voir', array('id'=>5)));
+	}
+
+	public function voirAction($id)
+	{
+
+
+// ENVOYER MAIL
+//	$mailer = $this->get('mailer');
+//	$message = \Swift_Message::newInstance()
+//		->setSubject('Hello Zero !')
+//		->setFrom('tuto@symffooo.com')
+//		->setTo('quentin.adt@gmail.com')
+//		->setBody('Coucoucoucoucoucoucoucocuocuocu');
+//	$mailer->send($message);
+//	return new Response('mail envoyÃ !©');
+
+	return $this->render('SdzBlogBundle:Blog:voir.html.twig', array('id' => $id));
+
+//RECUPERER CONTENU DE VAR DANS URL
+//	$request= $this->getRequest();
+//	$tag = $request->query->get('tag');
+//	return new Response('Article '.$id.' tag '.$tag);
+	}
+
+//CHANGER CONTENT TYPE // AJAX
+//	$response = new Response(json_encode(array('id' => $id)));
+//	$response->headers->set('Content-Type','application/json');
+//	return $response;
+ //	return $this->render('SdzBlogBundle:Blog:voir.html.twig', array('id' => $id,));
+
+	public function voirSlugAction($slug, $annee, $format)
+	{
+		return new Response("Article de l'annee ".$annee." au slug ".$slug." de format ".$format.".");
+	}
+}

@@ -1,0 +1,30 @@
+{# src/Sdz/BlogBundle/Resources/views/Blog/sejours_par_pays.html.twig #}
+ 
+{% extends "SdzBlogBundle::layout.html.twig" %}
+ 
+{% block title %}Liste des sejours {{ pays }} - {{ parent() }} {% endblock %}
+   
+{% block sdzblog_body %}
+			{  #  <pre>DUMP: {{ dump(resultsolr) }}</pre> #}
+<h2>Liste des sejours</h2>
+	<ul>{% for resultat in resultsolr  %}
+		{ # if resultat.terms is not null #}
+			<li>Resultat {{loop.index }}</li>
+			<ul>
+				{# <li>ID: {{ resultat.id }}</li> #}
+				<li>Name: {{ resultat.manufacturer }}</li>
+				<li>Depart: {{ resultat.extra1 }}</li>
+				<li>Descriptif: {{ resultat.terms }}</li>
+				<li>Photo: <img src="{{ resultat.smallImage }}"></li>
+			</ul>
+		{# endif  #}
+	{% endfor  %}
+	</ul>
+
+<div class="pagination">
+    <ul>
+      {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
+    </ul>
+  </div>
+
+{% endblock %}

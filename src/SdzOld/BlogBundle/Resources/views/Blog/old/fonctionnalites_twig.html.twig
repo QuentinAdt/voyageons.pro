@@ -1,0 +1,36 @@
+{# src/Sdz/BlogBundle/Resources/views/Blog/voir.html.twig #}
+{% extends "SdzBlogBundle::layout.html.twig" %}
+
+{% block title %} Article - {{ article.id }} - {{ parent() }} {% endblock %}
+ 
+{% block sdzblog_body %}
+<h2>{{ article.titre  }}</h2>
+<i>Par {{  article.auteur }} le {{ article.date|date('d/m/Y') }}</i>
+
+
+{# //FLASHBAG #}
+{# On affiche tous les messages flash dont le nom est "info" #}
+{% for message in app.session.flashbag.get('info') %}
+<p>{{ message }}</p>
+{% endfor %}
+
+
+{# //VAR #}
+{{ "Il y a %s pommes et %s poires"|upper|length|format(153, id) }}
+
+{# //LOOP #}
+<ul>
+	{% for i in 0..2 %}
+		<li>Loop.index: {{ loop.index }}</li>
+		<li>Loop.index0: {{ loop.index0 }}</li>
+		<li>Loop.revindex: {{ loop.revindex }}</li>
+		<li>Loop.revindex0: {{ loop.revindex0 }}</li>
+	{% endfor %}
+</ul>
+
+{# // data dans parameter.yml #}
+<footer>Webmaster : {{ webmaster|upper	 }}</footer>
+    <p>
+    </p>
+  </body>
+</html>
