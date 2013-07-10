@@ -1,0 +1,18 @@
+travel_index:
+    pattern: /{page}
+    defaults: { _controller:TravelTravelBundle:Default:index, page:1}
+    requirements:
+        id:     \d*
+
+travel_sort_resorts_by_country_paginated:
+    pattern: /sejour/{pays}/startfrom-{start}
+    defaults: { _controller: TravelTravelBundle:Default:sort_resorts_by_country, start:0}
+    requirements:
+        start:   \d*
+
+travel_sort_resorts_by_country:
+    pattern: /sejour/{pays}
+    defaults: { _controller: TravelTravelBundle:Default:sort_resorts_by_country, start:0}
+    requirements:
+        start:   \d*
+
